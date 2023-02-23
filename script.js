@@ -43,7 +43,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let hours = 0
     let minutes = 0
     let seconds = 0
-    let stats = 0
 
     startStopBtn.addEventListener("click", () => {
         isStopwatchOn = !isStopwatchOn
