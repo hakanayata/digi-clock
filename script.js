@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const currentMinutes = String(now.getMinutes()).padStart(2, '0')
         const currentSeconds = String(now.getSeconds()).padStart(2, '0')
 
+        // display current time on screen
         hourEl.textContent = currentHours
         minEl.textContent = currentMinutes
         secEl.textContent = currentSeconds
@@ -53,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
             startStopBtn.textContent = "Stop"
             startStopBtn.classList.remove("btn-success")
             startStopBtn.classList.add("btn-danger")
+            // call stopwatch function every 1 second
             intervalID = setInterval(stopwatch, 1000);
         } else {
             startStopBtn.textContent = "Start"
@@ -73,6 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function stopwatch() {
         seconds += 1
+
         if (seconds > 59) {
             minutes += 1
             seconds = 0
@@ -88,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
             minutes = 0
             seconds = 0
         }
-
+        // display stopwatch
         swSecEl.textContent = String(seconds).padStart(2, '0')
         swMinEl.textContent = String(minutes).padStart(2, '0')
         swHourEl.textContent = String(hours).padStart(2, '0')
