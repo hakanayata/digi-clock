@@ -69,6 +69,9 @@ window.addEventListener('DOMContentLoaded', () => {
             swHourEl.textContent = "00"
             swMinEl.textContent = "00"
             swSecEl.textContent = "00"
+            hours = 0
+            minutes = 0
+            seconds = 0
             clearInterval(intervalID)
         }
     })
